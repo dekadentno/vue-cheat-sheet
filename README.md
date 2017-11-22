@@ -112,7 +112,7 @@ Vue.component('signature', {
 
 ### References
 ```html
-input ref="name" type="text" />
+<input ref="name" type="text" />
 ```
 ```javascript
 var name = this.$refs.name;
