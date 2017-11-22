@@ -41,45 +41,43 @@ new Vue({
 ```
 ---
 ### HTML directives
-
-Show/hide div
-> where _available_ is a boolean variable in the js 
+##### Show/hide div
+where _available_ is a boolean variable in the js 
 ```html
 <div v-show="{{available}}">Stuff</div>
 ```
-Toggle show/hide div
-> where _available_ is a boolean variable in the js 
+##### Toggle show/hide div
+where _available_ is a boolean variable in the js 
 ```html
 <div v-show="{{available = !available}}">Stuff</div>
 ```
 
-Render div
-> where _available_ is a boolean variable in the js 
+##### Render div
+where _available_ is a boolean variable in the js 
 ```html
 <div v-if="{{available}}">Stuff</div>
 <div v-else>Smth else</div>
 ```
 
-Looping
-> array of strings
+##### Looping
+##### array of strings
 ```html
 <ul>
     <li v-for="(element, index) in elements">{{index}} {{element}}</li>
 </ul>
 ```
-> array of objects
+##### array of objects
 ```html
 <ul>
     <li v-for="employee in employees">{{employee.name}} - {{employee.age}}</li>
 </ul>
 ```
 
-Set text for element from a variable _name_
+##### Set text for element from a variable _name_
 ```html
 <span v-text="name"></span>
 ```
-
-Set html for element from a variable _name_
+##### Set html for element from a variable _name_
 ```html
 <span v-html="name"></span>
 ```
@@ -98,12 +96,12 @@ data:{
 ```
 ---
 ### Events
-Call _method_ on click event
-> where _method_ is a custom method in the js
+##### Call _method_ on click event
+where _method_ is a custom method in the js
 ```html
 <button v-on:click="method">Add</button>
 ```
-> _method_ is called when ALT+ENTER is pressed
+_method_ is called when ALT+ENTER is pressed
 ```html
 <input ref="name" v-on:keyuop.alt.enter="method" type="text" />
 ```
@@ -120,7 +118,7 @@ this.$emit("eventName", data);
 ```
 ---
 ### Event bus
-> communicate between child components without the parent component
+##### communicate between child components without the parent component
 ```javascript
 // main.js
 // create new event bus
@@ -148,13 +146,13 @@ bus.$emit("eventName", data);
 ```html
 <p v-bind:style="{ property: value }">...</p>
 ```
-> this div will have the _red_ class if the _userFound_ variable is set to _true_
+this div will have the _red_ class if the _userFound_ variable is set to _true_
 ```html
 <div v-bind:class="{ red: userFound }">...</div>
 ```
 ---
 ### Components
-> reusable inside the html
+##### reusable inside the html
 ```html
 <div id="app">
 	<signature></signature>
@@ -178,7 +176,7 @@ var name = this.$refs.name;
 ```
 ---
 ### .vue components and props
-> Props - passing data from parent component to child component
+##### Props - passing data from parent component to child component
 ```vue
 <!--App.vue-->
 <template>
@@ -302,8 +300,8 @@ var name = this.$refs.name;
 ```
 ---
 ### Dynamic components
-> dynamically change component based on variable _component_ value
-> rememberto use _keep-alive_ tag to remember data from the destroyed component
+dynamically change component based on variable _component_ value
+rememberto use _keep-alive_ tag to remember data from the destroyed component
 ```vue
 <template>
 
