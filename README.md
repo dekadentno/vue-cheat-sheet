@@ -82,7 +82,7 @@ Set html for element from a variable _name_
 ---
 ### Two way data binding
 ```html
-input v-model="name" type="text" />
+<input v-model="name" type="text" />
 <p>My name is: {{lastName}}</p>
 ```
 ```javascript
@@ -102,6 +102,41 @@ Call _method_ on click event
 > _method_ is called when ALT+ENTER is pressed
 ```html
 <input ref="name" v-on:keyuop.alt.enter="method" type="text" />
+```
+---
+### Custom events
+```javascript
+// fire custom event 
+this.$emit("eventName", data);
+```
+```html
+// $event == event data
+// when _eventName_ event happens, call _functionName_ function
+<p v-on:eventName="functionName($event)"></p>
+```
+---
+### Event bus
+> communicate between child components without the parent component
+```javascript
+// main.js
+// create new event bus
+export const bus = new Vue();
+```
+```vue
+// Header.vue
+import {bus} from "../main";
+
+// Footer.vue
+import {bus} from "../main";
+
+// listen to bus event in first component
+bus.$on("eventName", (data) => {
+	// callback
+	// use data
+})
+
+// fire bus event in second component
+bus.$emit("eventName", data);
 ```
 ---
 
@@ -264,7 +299,16 @@ Source: [iamshaunjp](https://github.com/iamshaunjp/vuejs-playlist)
 ```
 ---
 ### Validate props
-TODO
+```vue
+export default {
+	props:{
+		ninjas:{
+			type: Array,
+			required: true
+		}
+	}
+}
+```
 ---
 
 ### Vue CLI
