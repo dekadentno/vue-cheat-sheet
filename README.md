@@ -1,2 +1,81 @@
 # vue-cheat-sheet
 My cheat sheet for vue.js most basic stuff
+
+### Basic HTML and JS
+```html
+<html>
+	<head>
+		<meta charset="utf8">
+		<title>VueJS example</title>
+		<link href="style.css" rel="stylesheet" />
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	</head>
+
+	<body>
+		<div id="vue-app"></div>
+
+		<script src="app.js"></script>
+	</body>
+</html>
+```
+```javascript
+new Vue({
+	el: '#vue-app', // contoled element
+
+	data: {
+		name: "Matej",
+		age: 27,
+		sleepy: true
+	},
+
+	methods: {
+		test: function () {
+			console.log("test");
+		},
+	computed:{}
+});
+```
+
+### HTML directives
+
+Show/hide div
+> where _available_ is a boolean variable in the js 
+```html
+<div v-show="{{available}}">Stuff</div>
+```
+Toggle show/hide div
+> where _available_ is a boolean variable in the js 
+```html
+<div v-show="{{available = !available}}">Stuff</div>
+```
+
+Render div
+> where _available_ is a boolean variable in the js 
+```html
+<div v-if="{{available}}">Stuff</div>
+<div v-else>Smth else</div>
+```
+
+Looping
+> array of strings
+```html
+<ul>
+    <li v-for="(element, index) in elements">{{index}} {{element}}</li>
+</ul>
+```
+> array of objects
+```html
+<ul>
+    <li v-for="employee in employees">{{employee.name}} - {{employee.age}}</li>
+</ul>
+```
+
+Set text for element from a variable _name_
+```html
+<span v-text="name"></span>
+```
+
+Set html for element from a variable _name_
+```html
+<span v-html="name"></span>
+```
