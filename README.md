@@ -1,5 +1,9 @@
 # vue-cheat-sheet
 My cheat sheet for vue.js most basic stuff
+Sources:
+* [iamshaunjp](https://github.com/iamshaunjp/vuejs-playlist)
+* [Vue.js official guide](https://vuejs.org/v2/guide/)
+
 ---
 ### Basic HTML and JS
 ```html
@@ -298,6 +302,28 @@ Source: [iamshaunjp](https://github.com/iamshaunjp/vuejs-playlist)
 </script>
 ```
 ---
+### Dynamic components
+> Dynamically change component based on variable _component_ value
+```vue
+<template>
+
+<div>
+  <component> v-bind:is="componentName"></component>
+</div>
+
+</template>
+
+import formOne from "./components/formOne.vue";
+import formTwo from "./components/formTwo.vue";
+
+...
+data: function() {
+	return {
+		component: "form-two"
+	}
+}
+```
+---
 ### Validate props
 ```vue
 export default {
@@ -318,4 +344,15 @@ $ cd project-name
 $ npm install # install dependencies
 $ npm run dev # start a local server for development mod
 ```
+---
+### Vue lifecycle
+* new Vue();
+* .beforeCreate();
+* .created();
+* .beforeMount();
+* .updated();
+* .beforeUpdate();
+* .beforeDestroy();
+* .destroyed();
+![](https://vuejs.org/images/lifecycle.png)
 ---
