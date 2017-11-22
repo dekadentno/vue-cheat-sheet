@@ -79,3 +79,39 @@ Set html for element from a variable _name_
 ```html
 <span v-html="name"></span>
 ```
+### Events
+Call _method_ on click event
+> where _method_ is a custom method in the js
+```html
+<button v-on:click="method">Add</button>
+```
+
+### HTML properties and classes
+```html
+<p v-bind:style="{ property: value }">...</p>
+```
+> this div will have the _red_ class if the _userFound_ variable is set to _true_
+```html
+<div v-bind:class="{ red: userFound }">...</div>
+```
+
+### Components
+> reusable inside the html
+```html
+<div id="app">
+	<signature></signature>
+	<signature></signature>
+</div>
+```
+```javascript
+// global registration 
+Vue.component('signature', { 
+     template: '<p>Regards. Matej.</p>'
+});
+```
+
+### Vue CLI
+```
+$ vue init webpack-simple project-name
+$ npm run dev
+```
