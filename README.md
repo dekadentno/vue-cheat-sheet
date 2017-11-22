@@ -80,6 +80,19 @@ Set html for element from a variable _name_
 <span v-html="name"></span>
 ```
 ---
+### Two way data binding
+```html
+input v-model="name" type="text" />
+<p>My name is: {{lastName}}</p>
+```
+```javascript
+...
+data:{
+	name: ""
+}
+...
+```
+---
 ### Events
 Call _method_ on click event
 > where _method_ is a custom method in the js
@@ -124,6 +137,129 @@ Vue.component('signature', {
 var name = this.$refs.name;
 
 ```
+---
+### .vue components
+Source: [iamshaunjp](https://github.com/iamshaunjp/vuejs-playlist)
+```vue
+<!--App.vue-->
+<template>
+
+<div>
+  <app-header></app-header>
+  <app-ninjas></app-ninjas>
+  <app-footer></app-footer>
+</div>
+
+</template>
+
+<script>
+  // import
+  import Header from './components/Header.vue';
+  import Footer from './components/Footer.vue';
+  import Ninjas from './components/Ninjas.vue';
+  export default {
+  // register components
+    components:{
+      // added app- prefix
+      // because header and footer tags already exist
+      "app-header": Header,
+      "app-footer": Footer,
+      "app-ninjas": Ninjas
+    },
+
+    data () {
+      return {
+
+      }
+    }
+
+  }
+
+</script>
+```
+```vue
+<!--Ninjas.vue-->
+<template>
+<div id="ninjas">
+  <ul>
+    <li v-for="ninja in ninjas">
+      <h2>{{ninja.name}} - {{ninja.speciality}}</h2>
+    </li>
+  </ul>
+</div>
+
+</template>
+
+<script>
+
+  export default {
+
+
+    data () {
+      return {
+        ninjas:[
+          {name: "ninja1", speciality: "vuejs"},
+          {name: "ninja2", speciality: "nodejs"},
+          {name: "ninja3", speciality: "react"},
+          {name: "ninja4", speciality: "js"},
+          {name: "ninja5", speciality: "css3"},
+          {name: "ninja6", speciality: "ps"}
+        ]
+      }
+    }
+
+  }
+
+</script>
+```
+```vue
+<!--Header.vue-->
+<template>
+  <header>
+    <h1>{{title}}</h1>
+  </header>
+
+</template>
+
+<script>
+
+  export default {
+
+    data () {
+      return {
+        title: "Welcome!"
+      }
+    }
+
+  }
+
+</script>
+```
+```vue
+<!--Footer.vue-->
+<template>
+<footer>
+  <p>{{copyright}}</p>
+</footer>
+
+</template>
+
+<script>
+
+  export default {
+
+
+    data () {
+      return {
+        copyright: "Copyright 2017 "
+      }
+    }
+
+  }
+
+</script>
+```
+
 ---
 
 ### Vue CLI
