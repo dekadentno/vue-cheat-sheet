@@ -138,15 +138,16 @@ var name = this.$refs.name;
 
 ```
 ---
-### .vue components
+### .vue components and props
 Source: [iamshaunjp](https://github.com/iamshaunjp/vuejs-playlist)
+> Props - passing data from parent component to child component
 ```vue
 <!--App.vue-->
 <template>
 
 <div>
   <app-header></app-header>
-  <app-ninjas></app-ninjas>
+  <app-ninjas v-bind:ninjas="ninjas"></app-ninjas>
   <app-footer></app-footer>
 </div>
 
@@ -169,7 +170,14 @@ Source: [iamshaunjp](https://github.com/iamshaunjp/vuejs-playlist)
 
     data () {
       return {
-
+        ninjas:[
+          {name: "ninja1", speciality: "vuejs", show: false},
+          {name: "ninja2", speciality: "nodejs", show: false},
+          {name: "ninja3", speciality: "react", show: false},
+          {name: "ninja4", speciality: "js", show: false},
+          {name: "ninja5", speciality: "css3", show: false},
+          {name: "ninja6", speciality: "ps", show: false}
+        ]
       }
     }
 
@@ -182,8 +190,9 @@ Source: [iamshaunjp](https://github.com/iamshaunjp/vuejs-playlist)
 <template>
 <div id="ninjas">
   <ul>
-    <li v-for="ninja in ninjas">
-      <h2>{{ninja.name}} - {{ninja.speciality}}</h2>
+    <li v-for="ninja in ninjas" v-on:click="ninja.show = !ninja.show">
+      <h2>{{ninja.name}}</h2>
+      <h3 v-show="ninja.show">{{ninja.speciality}}</h3>
     </li>
   </ul>
 </div>
@@ -193,18 +202,12 @@ Source: [iamshaunjp](https://github.com/iamshaunjp/vuejs-playlist)
 <script>
 
   export default {
-
+    // what is it receiving
+    props: ["ninjas"],
 
     data () {
       return {
-        ninjas:[
-          {name: "ninja1", speciality: "vuejs"},
-          {name: "ninja2", speciality: "nodejs"},
-          {name: "ninja3", speciality: "react"},
-          {name: "ninja4", speciality: "js"},
-          {name: "ninja5", speciality: "css3"},
-          {name: "ninja6", speciality: "ps"}
-        ]
+
       }
     }
 
@@ -259,7 +262,9 @@ Source: [iamshaunjp](https://github.com/iamshaunjp/vuejs-playlist)
 
 </script>
 ```
-
+---
+### Validate props
+TODO
 ---
 
 ### Vue CLI
