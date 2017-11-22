@@ -178,7 +178,6 @@ var name = this.$refs.name;
 ```
 ---
 ### .vue components and props
-Source: [iamshaunjp](https://github.com/iamshaunjp/vuejs-playlist)
 > Props - passing data from parent component to child component
 ```vue
 <!--App.vue-->
@@ -303,7 +302,8 @@ Source: [iamshaunjp](https://github.com/iamshaunjp/vuejs-playlist)
 ```
 ---
 ### Dynamic components
-> Dynamically change component based on variable _component_ value
+> dynamically change component based on variable _component_ value
+> rememberto use _keep-alive_ tag to remember data from the destroyed component
 ```vue
 <template>
 
