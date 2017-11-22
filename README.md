@@ -110,8 +110,19 @@ Vue.component('signature', {
 });
 ```
 
+### References
+```html
+input ref="name" type="text" />
+```
+```javascript
+var name = this.$refs.name;
+
+```
+
 ### Vue CLI
 ```
-$ vue init webpack-simple project-name
-$ npm run dev
+$ vue init webpack-simple my-project
+$ cd project-name
+$ npm install # install dependencies
+$ npm run dev # start a local server for development mod
 ```
