@@ -85,6 +85,10 @@ Call _method_ on click event
 ```html
 <button v-on:click="method">Add</button>
 ```
+> _method_ is called when ALT+ENTER is pressed
+```html
+<input ref="name" v-on:keyuop.alt.enter="method" type="text" />
+```
 
 ### HTML properties and classes
 ```html
