@@ -112,8 +112,10 @@ _method_ is called when ALT+ENTER is pressed
 this.$emit("eventName", data);
 ```
 ```html
-// $event == event data
-// when _eventName_ event happens, call _functionName_ function
+<!-- 
+$event == event data
+when _eventName_ event happens, call _functionName_ function
+-->
 <p v-on:eventName="functionName($event)"></p>
 ```
 ---
@@ -124,13 +126,15 @@ this.$emit("eventName", data);
 // create new event bus
 export const bus = new Vue();
 ```
-```vue
+```html
 // Header.vue
 import {bus} from "../main";
-
+```
+```html
 // Footer.vue
 import {bus} from "../main";
-
+```
+```javascript
 // listen to bus event in first component
 bus.$on("eventName", (data) => {
 	// callback
