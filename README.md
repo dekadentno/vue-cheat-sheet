@@ -1,6 +1,6 @@
 # vue-cheat-sheet
 My cheat sheet for vue.js most basic stuff
-
+---
 ### Basic HTML and JS
 ```html
 <html>
@@ -35,7 +35,7 @@ new Vue({
 	computed:{}
 });
 ```
-
+---
 ### HTML directives
 
 Show/hide div
@@ -79,6 +79,7 @@ Set html for element from a variable _name_
 ```html
 <span v-html="name"></span>
 ```
+---
 ### Events
 Call _method_ on click event
 > where _method_ is a custom method in the js
@@ -89,6 +90,7 @@ Call _method_ on click event
 ```html
 <input ref="name" v-on:keyuop.alt.enter="method" type="text" />
 ```
+---
 
 ### HTML properties and classes
 ```html
@@ -98,7 +100,7 @@ Call _method_ on click event
 ```html
 <div v-bind:class="{ red: userFound }">...</div>
 ```
-
+---
 ### Components
 > reusable inside the html
 ```html
@@ -113,7 +115,7 @@ Vue.component('signature', {
      template: '<p>Regards. Matej.</p>'
 });
 ```
-
+---
 ### References
 ```html
 <input ref="name" type="text" />
@@ -122,6 +124,7 @@ Vue.component('signature', {
 var name = this.$refs.name;
 
 ```
+---
 
 ### Vue CLI
 ```
@@ -130,3 +133,4 @@ $ cd project-name
 $ npm install # install dependencies
 $ npm run dev # start a local server for development mod
 ```
+---
