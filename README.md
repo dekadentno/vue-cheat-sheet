@@ -5,7 +5,7 @@ Sources:
 * [Vue.js official guide](https://vuejs.org/v2/guide/)
 
 ---
-### Basic HTML and JS
+## Basic HTML and JS
 ```html
 <html>
 	<head>
@@ -40,13 +40,13 @@ new Vue({
 });
 ```
 ---
-### HTML directives
-##### Show/hide div
+## HTML directives
+##### Show / hide div
 where _available_ is a boolean variable in the js 
 ```html
 <div v-show="available">Stuff</div>
 ```
-##### Toggle show/hide div
+##### Toggle show / hide div
 where _available_ is a boolean variable in the js 
 ```html
 <div v-show="available = !available">Stuff</div>
@@ -82,12 +82,12 @@ where _available_ is a boolean variable in the js
 <span v-html="name"></span>
 ```
 ---
-### Custom HTML directives
+## Custom HTML directives
 ##### todo
 
 ---
-### Filters
-##### Change the output data to the browser. They do not change the data directly
+## Filters
+##### Change the output data to the browser. They do not change the data directly.
 ```html
 <h1>{{title | to-uppercase}}</h1>
 ```
@@ -98,7 +98,7 @@ Vue.filter("to-uppercase", function ( value ) {
 });
 ```
 ---
-### Two way data binding
+## Two way data binding
 ```html
 <input v-model="name" type="text" />
 <p>My name is: {{lastName}}</p>
@@ -111,7 +111,7 @@ data:{
 ...
 ```
 ---
-### Events
+## Events
 ##### Call _method_ on click event
 where _method_ is a custom method in the js
 ```html
@@ -122,7 +122,7 @@ _method_ is called when ALT+ENTER is pressed
 <input ref="name" v-on:keyuop.alt.enter="method" type="text" />
 ```
 ---
-### Custom events
+## Custom events
 ```javascript
 // fire custom event 
 this.$emit("eventName", data);
@@ -135,7 +135,7 @@ when _eventName_ event happens, call _functionName_ function
 <p v-on:eventName="functionName($event)"></p>
 ```
 ---
-### Event bus
+## Event bus
 ##### communicate between child components without the parent component
 ```javascript
 // main.js
@@ -163,7 +163,7 @@ bus.$emit("eventName", data);
 ```
 ---
 
-### HTML properties and classes
+## HTML properties and classes
 ```html
 <p v-bind:style="{ property: value }">...</p>
 ```
@@ -172,7 +172,7 @@ this div will have the _red_ class if the _userFound_ variable is set to _true_
 <div v-bind:class="{ red: userFound }">...</div>
 ```
 ---
-### Components
+## Components
 ##### reusable inside the html
 ```html
 <div id="app">
@@ -188,7 +188,7 @@ Vue.component('signature', {
 });
 ```
 ---
-### References
+## References
 ```html
 <input ref="name" type="text" />
 ```
@@ -197,7 +197,7 @@ var name = this.$refs.name;
 
 ```
 ---
-### .vue components and props
+## .vue components and props
 ##### Props - passing data from parent component to child component
 ```vue
 <!--App.vue-->
@@ -321,7 +321,7 @@ var name = this.$refs.name;
 </script>
 ```
 ---
-### Dynamic components
+## Dynamic components
 dynamically change component based on variable _component_ value
 rememberto use _keep-alive_ tag to remember data from the destroyed component
 ```vue
@@ -344,7 +344,7 @@ data: function() {
 }
 ```
 ---
-### Validate props
+## Validate props
 ```vue
 export default {
 	props:{
@@ -357,7 +357,7 @@ export default {
 ```
 ---
 
-### Vue CLI
+## Vue CLI
 ```
 $ vue init webpack-simple my-project
 $ cd project-name
@@ -365,7 +365,7 @@ $ npm install # install dependencies
 $ npm run dev # start a local server for development mod
 ```
 ---
-### Vue lifecycle
+## Vue lifecycle
 * new Vue();
 * .beforeCreate();
 * .created();
@@ -376,7 +376,7 @@ $ npm run dev # start a local server for development mod
 * .destroyed();
 ![](https://vuejs.org/images/lifecycle.png)
 ---
-### Checkboxes
+## Checkboxes
 ##### with v-model, the _categories_ array will be appended with the values
 ```html
 <div>
@@ -396,7 +396,7 @@ data: function () {
 }
 ```
 ---
-### Select box binding
+## Select box binding
 ##### hardcoded and looped select
 ```html
 <div>
@@ -418,7 +418,7 @@ data: function () {
 }
 ```
 ---
-### POST requests with vue-resource
+## POST requests with vue-resource
 ##### Register it in main.js
 ```javascript
 import VueResource from 'vue-resource'
@@ -439,7 +439,7 @@ post: function () {
 }
 ```
 ---
-### GET requests
+## GET requests
 ##### Usage in custom function
 ```javascript
 post: function () {
@@ -450,7 +450,7 @@ post: function () {
 }
 ```
 ---
-### Routes with vue-router
+## Routes with vue-router
 ##### router.js
 ```javascript
 import login from "./components/login.vue";
@@ -522,6 +522,6 @@ new Vue({
 </ul>
 ```
 ---
-### Mixins
+## Mixins
 ##### Reuse some piece if code (or function) so that it doesn't need to be written in more separate files.
 ---
