@@ -450,3 +450,78 @@ post: function () {
 }
 ```
 ---
+### Routes with vue-router
+##### router.js
+```javascript
+import login from "./components/login.vue";
+import registration from "./components/Registration.vue";
+import user from "./components/user.vue";
+
+export default [
+  { path: "/", component: login },
+  { path: "/registration", component: registration },
+  { path: "/users/:id", component: user }
+]
+```
+##### main.js
+```javascript
+import VueRouter from 'vue-router';
+import Routes from "./routes";
+Vue.use(VueRouter);
+
+const router = new VueRouter({
+  routes: Routes
+});
+
+new Vue({
+  el: '#app',
+  render: h => h(App),
+  router: router
+})
+
+```
+##### router-view is a component that renders the matched component for the given path
+```html
+<template>
+    <router-view></router-view>
+</template>
+```
+##### handling route parameters
+##### user.vue
+```vue
+<template>
+    <div id="user">
+      <h1></h1>
+      <div></div>
+    </div>
+</template>
+<script>
+
+  export default {
+    data: function () {
+      return {
+        id: this.$route.params.id,
+        user: {}
+      }
+    },
+
+    created(){
+      this.$http.get("http://url/user/" + this.id).then(function(res){
+        this.user = res.body;
+      });
+    }
+
+  }
+</script>
+```
+##### navigating around
+```html
+<ul>
+	<li><router-link to="/" exact>Home</router-link></li>
+	<li><router-link to="/add" exact>Add user</router-link></li>
+</ul>
+```
+---
+### Mixins
+##### Reuse some piece if code (or function) so that it doesn't need to be written in more separate files.
+---
