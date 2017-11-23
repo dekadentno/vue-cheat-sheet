@@ -44,12 +44,12 @@ new Vue({
 ##### Show/hide div
 where _available_ is a boolean variable in the js 
 ```html
-<div v-show="{{available}}">Stuff</div>
+<div v-show="available">Stuff</div>
 ```
 ##### Toggle show/hide div
 where _available_ is a boolean variable in the js 
 ```html
-<div v-show="{{available = !available}}">Stuff</div>
+<div v-show="available = !available">Stuff</div>
 ```
 
 ##### Render div
@@ -136,6 +136,7 @@ import {bus} from "../main";
 ```
 ```javascript
 // listen to bus event in first component
+// usually in .created() function
 bus.$on("eventName", (data) => {
 	// callback
 	// use data
@@ -159,6 +160,7 @@ this div will have the _red_ class if the _userFound_ variable is set to _true_
 ##### reusable inside the html
 ```html
 <div id="app">
+	<!-- <component is="signature"></component> -->
 	<signature></signature>
 	<signature></signature>
 </div>
@@ -358,3 +360,43 @@ $ npm run dev # start a local server for development mod
 * .destroyed();
 ![](https://vuejs.org/images/lifecycle.png)
 ---
+### Checkboxes
+##### with v-model, the _categories_ array will be appended with the values
+```html
+<div>
+	<label for="">Newsletters</label>
+	<input type="checkbox" value="newsletter" v-model="categories">
+	<label for="">New posts</label>
+	<input type="checkbox" value="post" v-model="categories">
+	<label for="">New DMs</label>
+	<input type="checkbox" value="dm" v-model="categories">
+	<label for="">New pokes</label>
+	<input type="checkbox" value="pokes" v-model="categories">
+</div>
+```
+```javascript
+data: function () {
+	categories: []
+}
+```
+### Select box binding
+##### hardcoded and looped select
+```html
+<div>
+	<select v-model="town">
+	  <option value="osijek">Osijek</option>
+	  <option value="zagreb">Zagreb</option>
+	  <option value="varazdin">Varazdin</option>
+	</select>
+
+	<select v-model="town">
+	  <option v-for="t in towns">{{ t }}</option>
+	</select>
+</div>
+```
+```javascript
+data: function () {
+	town: "",
+        towns: ["Zagreb", "Osijek", "Varazdin", "Split", "Rijeka", "Dubrovnik"]
+}
+```
