@@ -82,6 +82,22 @@ where _available_ is a boolean variable in the js
 <span v-html="name"></span>
 ```
 ---
+### Custom HTML directives
+##### todo
+
+---
+### Filters
+##### Change the output data to the browser. They do not change the data directly
+```html
+<h1>{{title | to-uppercase}}</h1>
+```
+```javascript
+// main.js
+Vue.filter("to-uppercase", function ( value ) {
+    return value.toUpperCase();
+});
+```
+---
 ### Two way data binding
 ```html
 <input v-model="name" type="text" />
@@ -379,6 +395,7 @@ data: function () {
 	categories: []
 }
 ```
+---
 ### Select box binding
 ##### hardcoded and looped select
 ```html
@@ -400,3 +417,36 @@ data: function () {
         towns: ["Zagreb", "Osijek", "Varazdin", "Split", "Rijeka", "Dubrovnik"]
 }
 ```
+---
+### POST requests with vue-resource
+##### Register it in main.js
+```javascript
+import VueResource from 'vue-resource'
+
+Vue.use(VueResource);
+```
+##### Usage in custom function 
+```javascript
+post: function () {
+	this.$http.post("http://url", {
+		title: this.blog.title,
+		body: this.blog.body,
+		userId: 1
+	}).then( function ( res ){
+	// promise
+		console.log("Response: ", res)
+	});
+}
+```
+---
+### GET requests
+##### Usage in custom function
+```javascript
+post: function () {
+	this.$http.get("http://url/").then( function ( res ){
+		// promise
+		console.log("Response: ", res)
+	});
+}
+```
+---
