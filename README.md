@@ -42,6 +42,7 @@ new Vue({
 			return "Hello";
 		},
 	computed:{}
+    }
 });
 ```
 ---
