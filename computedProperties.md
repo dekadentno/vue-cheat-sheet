@@ -1,4 +1,4 @@
-## Computed methods
+## Computed properties
 > Computed properties are cached, and only re-computed on reactive dependency changes. Note that if a certain dependency is out of the instance’s scope (i.e. not reactive), the computed property will not be updated.
 
 ```html
@@ -51,7 +51,7 @@ new Vue({
     }
 });
 ```
-##### Computed methods can also have getters and setters
+##### Computed property methods can also have getters and setters
 ```javascript
 var vm = new Vue({
   data: { a: 1 },
