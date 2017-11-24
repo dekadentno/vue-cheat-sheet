@@ -539,4 +539,4 @@ new Vue({
 ## Stuff that might get handy
 * _v-once_ - render the element and component only once
 * _v-if_ - conditionally render the element
-* 
+* [Difference between computed and methods](https://github.com/dekadentno/vue-cheat-sheet/blob/master/computedMethods.md)
