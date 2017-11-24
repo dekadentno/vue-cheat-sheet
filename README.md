@@ -16,7 +16,12 @@ Sources:
 	</head>
 
 	<body>
-		<div id="vue-app"></div>
+		<div id="vue-app">
+			<p> {{ hello() }} </p>
+			<p> {{ name }} </p>
+			<p> {{ age + 1 }} </p>
+			<p> {{ age < 18 ? "Youngster" : "Adult"}} </p>
+		</div>
 
 		<script src="app.js"></script>
 	</body>
@@ -33,14 +38,15 @@ new Vue({
 	},
 
 	methods: {
-		test: function () {
-			console.log("test");
+		hello: function () {
+			return "Hello";
 		},
 	computed:{}
 });
 ```
 ---
-## HTML directives
+## HTML directives 
+https://vuejs.org/v2/api/#Directives
 ##### Show / hide div
 where _available_ is a boolean variable in the js 
 ```html
@@ -84,24 +90,11 @@ where _available_ is a boolean variable in the js
 ---
 ## Custom HTML directives
 ##### todo
-
----
-## Filters
-##### Change the output data to the browser. They do not change the data directly.
-```html
-<h1>{{title | to-uppercase}}</h1>
-```
-```javascript
-// main.js
-Vue.filter("to-uppercase", function ( value ) {
-    return value.toUpperCase();
-});
-```
 ---
 ## Two way data binding
 ```html
 <input v-model="name" type="text" />
-<p>My name is: {{lastName}}</p>
+<p>My name is: {{name}}</p>
 ```
 ```javascript
 ...
@@ -111,11 +104,26 @@ data:{
 ...
 ```
 ---
+## HTML properties and classes
+```html
+<p v-bind:style="{ property: value }">...</p>
+```
+this div will have the _red_ class if the _userFound_ variable is set to _true_
+```html
+<div v-bind:class="{ red: userFound }">...</div>
+```
+---
+---
 ## Events
 ##### Call _method_ on click event
 where _method_ is a custom method in the js
 ```html
 <button v-on:click="method">Add</button>
+```
+##### or shorthand
+where _method_ is a custom method in the js
+```html
+<button @click="method">Add</button>
 ```
 _method_ is called when ALT+ENTER is pressed
 ```html
@@ -162,16 +170,6 @@ bus.$on("eventName", (data) => {
 bus.$emit("eventName", data);
 ```
 ---
-
-## HTML properties and classes
-```html
-<p v-bind:style="{ property: value }">...</p>
-```
-this div will have the _red_ class if the _userFound_ variable is set to _true_
-```html
-<div v-bind:class="{ red: userFound }">...</div>
-```
----
 ## Components
 ##### reusable inside the html
 ```html
@@ -185,6 +183,18 @@ this div will have the _red_ class if the _userFound_ variable is set to _true_
 // global registration 
 Vue.component('signature', { 
      template: '<p>Regards. Matej.</p>'
+});
+```
+---
+## Filters
+##### Change the output data to the browser. They do not change the data directly.
+```html
+<h1>{{title | to-uppercase}}</h1>
+```
+```javascript
+// main.js
+Vue.filter("to-uppercase", function ( value ) {
+    return value.toUpperCase();
 });
 ```
 ---
@@ -525,3 +535,7 @@ new Vue({
 ## Mixins
 ##### Reuse some piece if code (or function) so that it doesn't need to be written in more separate files.
 ---
+## Stuff that might get handy
+* _v-once_ - render the element and component only once
+* _v-if_ - conditionally render the element
+* 
