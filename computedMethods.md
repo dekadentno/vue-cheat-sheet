@@ -51,3 +51,28 @@ new Vue({
     }
 });
 ```
+##### Computed methods can also have getters and setters
+```javascript
+var vm = new Vue({
+  data: { a: 1 },
+  computed: {
+    // get only
+    aDouble: function () {
+      return this.a * 2
+    },
+    // both get and set
+    aPlus: {
+      get: function () {
+        return this.a + 1
+      },
+      set: function (v) {
+        this.a = v - 1
+      }
+    }
+  }
+})
+vm.aPlus   // => 2
+vm.aPlus = 3
+vm.a       // => 2
+vm.aDouble // => 4
+```
