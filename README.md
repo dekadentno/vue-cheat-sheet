@@ -45,10 +45,10 @@ new Vue({
     }
 });
 ```
----
-## HTML directives 
-https://vuejs.org/v2/api/#Directives
+
+## HTML directives  
 ##### Show / hide div
+##### Hides the element (display none), doesn't delete it
 where _available_ is a boolean variable in the js 
 ```html
 <div v-show="available">Stuff</div>
@@ -60,6 +60,7 @@ where _available_ is a boolean variable in the js
 ```
 
 ##### Render div
+##### Deletes the element, doesn't hide it
 where _available_ is a boolean variable in the js 
 ```html
 <div v-if="{{available}}">Stuff</div>
@@ -88,10 +89,10 @@ where _available_ is a boolean variable in the js
 ```html
 <span v-html="name"></span>
 ```
----
+
 ## Custom HTML directives
 ##### todo
----
+
 ## Two way data binding
 ```html
 <input v-model="name" type="text" />
@@ -104,7 +105,7 @@ data:{
 }
 ...
 ```
----
+
 ## HTML properties and classes
 ```html
 <p v-bind:style="{ property: value }">...</p>
@@ -113,8 +114,7 @@ this div will have the _red_ class if the _userFound_ variable is set to _true_
 ```html
 <div v-bind:class="{ red: userFound }">...</div>
 ```
----
----
+
 ## Events
 ##### Call _method_ on click event
 where _method_ is a custom method in the js
@@ -130,7 +130,7 @@ _method_ is called when ALT+ENTER is pressed
 ```html
 <input ref="name" v-on:keyuop.alt.enter="method" type="text" />
 ```
----
+
 ## Custom events
 ```javascript
 // fire custom event 
@@ -143,7 +143,7 @@ when _eventName_ event happens, call _functionName_ function
 -->
 <p v-on:eventName="functionName($event)"></p>
 ```
----
+
 ## Event bus
 ##### communicate between child components without the parent component
 ```javascript
@@ -170,7 +170,7 @@ bus.$on("eventName", (data) => {
 // fire bus event in second component
 bus.$emit("eventName", data);
 ```
----
+
 ## Components
 ##### reusable inside the html
 ```html
@@ -186,28 +186,7 @@ Vue.component('signature', {
      template: '<p>Regards. Matej.</p>'
 });
 ```
----
-## Filters
-##### Change the output data to the browser. They do not change the data directly.
-```html
-<h1>{{title | to-uppercase}}</h1>
-```
-```javascript
-// main.js
-Vue.filter("to-uppercase", function ( value ) {
-    return value.toUpperCase();
-});
-```
----
-## References
-```html
-<input ref="name" type="text" />
-```
-```javascript
-var name = this.$refs.name;
 
-```
----
 ## .vue components and props
 ##### Props - passing data from parent component to child component
 ```vue
@@ -274,7 +253,7 @@ var name = this.$refs.name;
     // what is it receiving
     props: ["ninjas"],
 
-    data () {
+    data: function () {
       return {
 
       }
@@ -297,7 +276,7 @@ var name = this.$refs.name;
 
   export default {
 
-    data () {
+    data: function () {
       return {
         title: "Welcome!"
       }
@@ -321,7 +300,7 @@ var name = this.$refs.name;
   export default {
 
 
-    data () {
+    data: function () {
       return {
         copyright: "Copyright 2017 "
       }
@@ -331,7 +310,44 @@ var name = this.$refs.name;
 
 </script>
 ```
----
+
+## Validate props
+```vue
+export default {
+	props:{
+		ninjas:{
+			type: Array,
+			required: true
+		}
+	}
+}
+```
+
+## Filters
+##### Change the output data to the browser. They do not change the data directly.
+```html
+<h1>{{title | to-uppercase}}</h1>
+```
+```javascript
+// main.js
+Vue.filter("to-uppercase", function ( value ) {
+    return value.toUpperCase();
+});
+```
+
+## Mixins
+##### Reuse some piece if code (or function) so that it doesn't need to be written in more separate files.
+
+
+## References
+```html
+<input ref="name" type="text" />
+```
+```javascript
+var name = this.$refs.name;
+
+```
+
 ## Dynamic components
 dynamically change component based on variable _component_ value
 rememberto use _keep-alive_ tag to remember data from the destroyed component
@@ -354,28 +370,24 @@ data: function() {
 	}
 }
 ```
----
-## Validate props
-```vue
-export default {
-	props:{
-		ninjas:{
-			type: Array,
-			required: true
-		}
-	}
-}
-```
----
 
 ## Vue CLI
+##### make new project
 ```
 $ vue init webpack-simple my-project
 $ cd project-name
-$ npm install # install dependencies
-$ npm run dev # start a local server for development mod
 ```
----
+##### install dependencies and start local server
+```
+$ npm install
+$ npm run dev
+```
+##### build app for production
+this will make a dist folder with minified js
+```
+$ npm run build
+```
+
 ## Vue lifecycle
 * new Vue();
 * .beforeCreate();
@@ -386,7 +398,7 @@ $ npm run dev # start a local server for development mod
 * .beforeDestroy();
 * .destroyed();
 ![](https://vuejs.org/images/lifecycle.png)
----
+
 ## Checkboxes
 ##### with v-model, the _categories_ array will be appended with the values
 ```html
@@ -406,7 +418,7 @@ data: function () {
 	categories: []
 }
 ```
----
+
 ## Select box binding
 ##### hardcoded and looped select
 ```html
@@ -428,7 +440,6 @@ data: function () {
         towns: ["Zagreb", "Osijek", "Varazdin", "Split", "Rijeka", "Dubrovnik"]
 }
 ```
----
 ## POST requests with vue-resource
 ##### Register it in main.js
 ```javascript
@@ -443,13 +454,15 @@ post: function () {
 		title: this.blog.title,
 		body: this.blog.body,
 		userId: 1
-	}).then( function ( res ){
+	}).then( res => {
 	// promise
-		console.log("Response: ", res)
+		console.log("Response: ", res);
+	}, error => {
+		console.log("Error: ", error);
 	});
 }
 ```
----
+
 ## GET requests
 ##### Usage in custom function
 ```javascript
@@ -460,10 +473,10 @@ post: function () {
 	});
 }
 ```
----
+
 ## Routes with vue-router
-##### router.js
 ```javascript
+// router.js
 import login from "./components/login.vue";
 import registration from "./components/Registration.vue";
 import user from "./components/user.vue";
@@ -474,8 +487,8 @@ export default [
   { path: "/users/:id", component: user }
 ]
 ```
-##### main.js
 ```javascript
+// main.js
 import VueRouter from 'vue-router';
 import Routes from "./routes";
 Vue.use(VueRouter);
@@ -498,8 +511,8 @@ new Vue({
 </template>
 ```
 ##### handling route parameters
-##### user.vue
 ```vue
+<!-- user.vue -->
 <template>
     <div id="user">
       <h1></h1>
@@ -532,11 +545,13 @@ new Vue({
 	<li><router-link to="/add" exact>Add user</router-link></li>
 </ul>
 ```
----
-## Mixins
-##### Reuse some piece if code (or function) so that it doesn't need to be written in more separate files.
----
+
 ## Stuff that might get handy
 * _v-once_ - render the element and component only once
 * _v-if_ - conditionally render the element
 * [Difference between computed and methods](https://github.com/dekadentno/vue-cheat-sheet/blob/master/computedMethods.md)
+* watch - specify what property to listen for changes and then execute some code without returning values
+* v-model modifiers
+	* .lazy - fire event when user lefts the field
+	* .number - force the value to be converted to a integer
+	* .trim - delete whitespace
