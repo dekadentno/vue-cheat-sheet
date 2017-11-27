@@ -560,6 +560,10 @@ export const routes = [
 	<router-link to="/users" tag="li" active-class="active" ><a>Users</a></router-link>
 </ul>
 ```
+##### dynamically route over user details
+```vue
+<router-link v-bind:to='"/user/" + user.id' tag="li" v-for="(user, index) in users"> {{ user.username }}</router-link>
+```
 ##### navigate home 
 ```javascript
 this.#router.push("/");
