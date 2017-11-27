@@ -455,7 +455,7 @@ Vue.use(VueResource);
 ##### Usage in custom function 
 ```javascript
 post: function () {
-	this.$http.post("http://url", {
+	this.$http.post("http://localhost:3000/users", {
 		title: this.blog.title,
 		body: this.blog.body,
 		userId: 1
@@ -472,7 +472,7 @@ post: function () {
 ##### Usage in custom function
 ```javascript
 post: function () {
-	this.$http.get("http://url/").then( function ( res ){
+	this.$http.get("http://localhost:3000/users").then( function ( res ){
 		// promise
 		console.log("Response: ", res)
 	});
@@ -508,7 +508,7 @@ import Login from "./components/Login.vue";
 import Registration from "./components/Registration.vue";
 import User from "./components/User.vue";
 
-export const routes [
+export const routes = [
   { path: "", component: Login },
   { path: "/registration", component: Registration },
   { path: "/users/", component: Users, children: [
