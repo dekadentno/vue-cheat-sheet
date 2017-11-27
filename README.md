@@ -4,6 +4,11 @@ Sources:
 * [iamshaunjp](https://github.com/iamshaunjp/vuejs-playlist)
 * [Vue.js official guide](https://vuejs.org/v2/guide/)
 
+Cool external libs:
+* [axios](https://github.com/axios/axios) - promise based HTTP client
+* [vue-router](https://router.vuejs.org/en/) - routing
+* [vue-cli](https://github.com/vuejs/vue-cli) - CLI for scaffolding Vue.js projects
+* [vue-resorce](https://github.com/pagekit/vue-resource) - web requests and handling responses
 ---
 ## Basic HTML and JS
 ```html
@@ -480,31 +485,36 @@ post: function () {
 import login from "./components/login.vue";
 import registration from "./components/Registration.vue";
 import user from "./components/user.vue";
-
-export default [
-  { path: "/", component: login },
-  { path: "/registration", component: registration },
-  { path: "/users/:id", component: user }
-]
 ```
 ```javascript
 // main.js
 import VueRouter from 'vue-router';
-import Routes from "./routes";
+import { routes } from "./routes";
 Vue.use(VueRouter);
 
 const router = new VueRouter({
-  routes: Routes
+  routes
 });
 
 new Vue({
   el: '#app',
-  render: h => h(App),
-  router: router
+  router: router,
+  render: h => h(App)  
 })
-
 ```
-##### router-view is a component that renders the matched component for the given path
+```javascript
+// routes.js
+import Login from "./components/Login.vue";
+import Registration from "./components/Registration.vue";
+import User from "./components/User.vue";
+
+export const routes [
+  { path: "", component: login },
+  { path: "/registration", component: registration },
+  { path: "/users/:id", component: users }
+]
+```
+##### mark the place with router-view where the component of the currently active route will be loaded
 ```html
 <template>
     <router-view></router-view>
@@ -540,10 +550,14 @@ new Vue({
 ```
 ##### navigating around
 ```html
-<ul>
-	<li><router-link to="/" exact>Home</router-link></li>
-	<li><router-link to="/add" exact>Add user</router-link></li>
+<ul class="nav">
+	<router-link to="/" tag="li" active-class="active" exact><a>Home</a></router-link>
+	<router-link to="/users" tag="li" active-class="active" ><a>Users</a></router-link>
 </ul>
+```
+##### navigate home 
+```javascript
+this.#router.push("/");
 ```
 
 ## Stuff that might get handy
