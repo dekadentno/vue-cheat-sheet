@@ -509,9 +509,14 @@ import Registration from "./components/Registration.vue";
 import User from "./components/User.vue";
 
 export const routes [
-  { path: "", component: login },
-  { path: "/registration", component: registration },
-  { path: "/users/:id", component: users }
+  { path: "", component: Login },
+  { path: "/registration", component: Registration },
+  { path: "/users/", component: Users, children: [
+  	{ path: "", component: UserStart },
+	{ path: ":id", component: UserDetail },
+	{ path: ":id/edit", component: UserEdit }
+  ] }
+  
 ]
 ```
 ##### mark the place with router-view where the component of the currently active route will be loaded
