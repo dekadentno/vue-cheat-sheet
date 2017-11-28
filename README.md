@@ -9,6 +9,8 @@ Cool external libs:
 * [vue-router](https://router.vuejs.org/en/) - routing
 * [vue-cli](https://github.com/vuejs/vue-cli) - CLI for scaffolding Vue.js projects
 * [vue-resorce](https://github.com/pagekit/vue-resource) - web requests and handling responses
+* [Vuex](https://vuex.vuejs.org/en/intro.html)
+* [vue-stash](https://github.com/cklmercer/vue-stash) - simplified vuex
 ---
 ## Basic HTML and JS
 ```html
@@ -151,6 +153,7 @@ when _eventName_ event happens, call _functionName_ function
 
 ## Event bus
 ##### communicate between child components without the parent component
+##### consider using Vuex instead
 ```javascript
 // main.js
 // create new event bus
