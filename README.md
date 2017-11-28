@@ -569,6 +569,15 @@ export const routes = [
 this.#router.push("/");
 ```
 
+##### watch for route changes 
+```javascript
+watch: {
+      "$route": function (to, form){
+        this.id = to.params.id
+      }
+}
+```
+
 ## Stuff that might get handy
 * _v-once_ - render the element and component only once
 * _v-if_ - conditionally render the element
