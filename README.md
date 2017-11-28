@@ -515,7 +515,8 @@ export const routes = [
   	{ path: "", component: UserStart },
 	{ path: ":id", component: UserDetail },
 	{ path: ":id/edit", component: UserEdit }
-  ] }
+  ] },
+    {path: "*", redirect: "/"} // handle all uncovered routes 
   
 ]
 ```
@@ -566,7 +567,7 @@ export const routes = [
 ```
 ##### navigate home 
 ```javascript
-this.#router.push("/");
+this.#router.push({ path: "/home"});
 ```
 
 ##### watch for route changes 
