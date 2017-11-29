@@ -11,6 +11,7 @@ Cool external libs:
 * [vue-resorce](https://github.com/pagekit/vue-resource) - web requests and handling responses
 * [Vuex](https://vuex.vuejs.org/en/intro.html)
 * [vue-stash](https://github.com/cklmercer/vue-stash) - simplified vuex
+* [vue-material](https://vuematerial.io/components/app) - material design for vue apps
 ---
 ## Basic HTML and JS
 ```html
