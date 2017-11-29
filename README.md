@@ -570,7 +570,7 @@ export const routes = [
 ```
 ##### navigate home 
 ```javascript
-this.#router.push({ path: "/home"});
+this.$router.push({ path: "/home"});
 ```
 
 ##### watch for route changes 
