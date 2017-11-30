@@ -9,9 +9,13 @@ Cool external libs:
 * [vue-router](https://router.vuejs.org/en/) - routing
 * [vue-cli](https://github.com/vuejs/vue-cli) - CLI for scaffolding Vue.js projects
 * [vue-resorce](https://github.com/pagekit/vue-resource) - web requests and handling responses
-* [Vuex](https://vuex.vuejs.org/en/intro.html)
+* [Vuex](https://vuex.vuejs.org/en/intro.html) - centralized state management for Vue.js
 * [vue-stash](https://github.com/cklmercer/vue-stash) - simplified vuex
 * [vue-material](https://vuematerial.io/components/app) - material design for vue apps
+
+Useful Chrome extensions:
+* [Vue Devtools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?hl=en)
+* [JSON Formatter](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en)
 
 While learning and coding, it is essential to use the autoformat option in Webstorm (Alt + Shift + F), but first, you have to import it from the .xml file [webstorm_autoformat_scheme.xml](./webstorm_autoformat_scheme.xml).
 ```
