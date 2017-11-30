@@ -13,8 +13,10 @@ Cool external libs:
 * [vue-stash](https://github.com/cklmercer/vue-stash) - simplified vuex
 * [vue-material](https://vuematerial.io/components/app) - material design for vue apps
 
-While learning and coding, it is essential to use the autoformat option in Webstorm (Alt + Shift + F), but first, you have to inport it from the .xml file [webstorm_autoformat_scheme.xml](./webstorm_autoformat_scheme.xml).
-
+While learning and coding, it is essential to use the autoformat option in Webstorm (Alt + Shift + F), but first, you have to import it from the .xml file [webstorm_autoformat_scheme.xml](./webstorm_autoformat_scheme.xml).
+```
+(File -> Settings -> Editor -> Code Style -> Javascript -> Import Scheme -> Intellij IDEA code style XML
+```
 ---
 ## Basic HTML and JS
 ```html
