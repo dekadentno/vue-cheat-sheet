@@ -9,7 +9,7 @@ Cool external libs:
 * [axios](https://github.com/axios/axios) - promise based HTTP client
 * [vue-router](https://router.vuejs.org/en/) - routing
 * [vue-cli](https://github.com/vuejs/vue-cli) - CLI for scaffolding Vue.js projects
-* [vue-resorce](https://github.com/pagekit/vue-resource) - web requests and handling responses
+* [vue-resorce](https://github.com/pagekit/vue-resource) - web requests and handling responses (retired. Use axios instead)
 * [Vuex](https://vuex.vuejs.org/en/intro.html) - centralized state management for Vue.js
 * [vue-stash](https://github.com/cklmercer/vue-stash) - simplified vuex
 * [vue-material](https://vuematerial.io/components/app) - material design for vue apps
