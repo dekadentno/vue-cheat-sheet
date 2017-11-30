@@ -12,6 +12,9 @@ Cool external libs:
 * [Vuex](https://vuex.vuejs.org/en/intro.html)
 * [vue-stash](https://github.com/cklmercer/vue-stash) - simplified vuex
 * [vue-material](https://vuematerial.io/components/app) - material design for vue apps
+
+While learning and coding, it is essential to use the autoformat option in Webstorm (Alt + Shift + F), but first, you have to inport it from the .xml file [webstorm_autoformat_scheme.xml](./webstorm_autoformat_scheme.xml).
+
 ---
 ## Basic HTML and JS
 ```html
