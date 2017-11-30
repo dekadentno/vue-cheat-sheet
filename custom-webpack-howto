@@ -1,0 +1,13 @@
+# Creating a custom vue-cli webpack template
+
+##### Create a new template
+
+1. fork https://github.com/vuejs-templates/webpack
+2. rename the forked repo
+3. edit the contents of _template_ 
+4. commit and push changes
+
+##### Use template
+```
+vue init dekadentno/webpack-custom-mtj 
+```
