@@ -87,6 +87,7 @@ where _available_ is a boolean variable in the js
 
 ##### Looping
 ##### array of strings
+Remember to check if the element exists with v-if before looping over it
 ```html
 <ul>
     <li v-for="(element, index) in elements">{{index}} {{element}}</li>
@@ -95,7 +96,7 @@ where _available_ is a boolean variable in the js
 ##### array of objects
 ```html
 <ul>
-    <li v-for="employee in employees">{{employee.name}} - {{employee.age}}</li>
+    <li v-if="{{employee.length}}" v-for="employee in employees">{{employee.name}} - {{employee.age}}</li>
 </ul>
 ```
 
