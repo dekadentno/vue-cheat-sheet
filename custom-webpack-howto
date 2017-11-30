@@ -9,5 +9,5 @@
 
 ##### Use template
 ```
-vue init dekadentno/webpack-custom-mtj 
+vue init dekadentno/webpack-custom-mtj project_name
 ```
