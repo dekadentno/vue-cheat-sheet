@@ -1,5 +1,6 @@
 # vue-cheat-sheet
 My cheat sheet for vue.js most basic stuff
+
 Sources:
 * [iamshaunjp](https://github.com/iamshaunjp/vuejs-playlist)
 * [Vue.js official guide](https://vuejs.org/v2/guide/)
