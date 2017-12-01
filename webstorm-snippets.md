@@ -27,3 +27,14 @@ for (var $INDEX$ = 0; $INDEX$ < $ARRAY$.length; $INDEX$++) {
   $END$
 }
 ```
+
+##### div.test
+```javascript
+ <div class="test">
+ </div>
+```
+
+##### div#test
+<div id="test">
+</div>
+```
