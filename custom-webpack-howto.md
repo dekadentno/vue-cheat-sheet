@@ -4,15 +4,16 @@
 
 1. fork https://github.com/vuejs-templates/webpack
 2. rename the forked repo
-3. edit meta.js and package.json files
+3. edit meta.js, package.json and main.js files
 4. commit and push changes
 
 ##### Editing contents (adding packages)
 
-There are two files that have to be edited:
+There are 3 files that have to be edited:
 ```
 ./meta.js
 ./template/package.json
+./template/src/main.json
 ```
 __Be careful when choosing the package version in package.json file, otherwise things won't work!__
 Check the Node and npm version numbering [guide](https://scotch.io/tutorials/node-and-npm-version-numbering-guide-and-best-practices).
