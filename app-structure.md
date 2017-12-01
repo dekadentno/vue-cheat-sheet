@@ -4,7 +4,7 @@ It is important to read the official [Vue style guide](https://vuejs.org/v2/styl
 
 When generating a new project with vue-cli with the next command:
 ```
-$ vue init webpack my-project
+$ vue init dekadentno/webpack-barrage my-project
 ```
 it generates this structure:
 ```
