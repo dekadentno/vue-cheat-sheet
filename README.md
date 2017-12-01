@@ -109,9 +109,6 @@ Remember to check if the element exists with v-if before looping over it
 <span v-html="name"></span>
 ```
 
-## Custom HTML directives
-##### todo
-
 ## Two way data binding
 ```html
 <input v-model="name" type="text" />
