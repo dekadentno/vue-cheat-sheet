@@ -15,7 +15,7 @@ There are two files that have to be edited:
 ./template/package.json
 ```
 __Be careful when choosing the package version in package.json file, otherwise things won't work!__
-
+Check the Node and npm version numbering [guide](https://scotch.io/tutorials/node-and-npm-version-numbering-guide-and-best-practices).
 ##### Use remote template
 ```
 vue init dekadentno/webpack-barrage project_name
