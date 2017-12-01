@@ -597,7 +597,7 @@ watch: {
 ## Stuff that might get handy
 * _v-once_ - render the element and component only once
 * _v-if_ - conditionally render the element
-* [Difference between computed and methods](https://github.com/dekadentno/vue-cheat-sheet/blob/master/computedMethods.md)
+* [Difference between computed and methods](https://github.com/dekadentno/vue-cheat-sheet/blob/master/computed-properties.md)
 * watch - specify what property to listen for changes and then execute some code without returning values
 * v-model modifiers
 	* .lazy - fire event when user lefts the field
