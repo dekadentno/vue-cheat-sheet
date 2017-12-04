@@ -35,6 +35,7 @@ for (var $INDEX$ = 0; $INDEX$ < $ARRAY$.length; $INDEX$++) {
 ```
 
 ##### div#test
+```javascript
 <div id="test">
 </div>
 ```
