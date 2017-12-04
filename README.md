@@ -88,7 +88,7 @@ where _available_ is a boolean variable in the js
 ##### Deletes the element, doesn't hide it
 where _available_ is a boolean variable in the js 
 ```html
-<div v-if="{{available}}">Stuff</div>
+<div v-if="available">Stuff</div>
 <div v-else>Smth else</div>
 ```
 
@@ -103,7 +103,7 @@ Remember to check if the element exists with v-if before looping over it
 ##### array of objects
 ```html
 <ul>
-    <li v-if="{{employee.length}}" v-for="employee in employees">{{employee.name}} - {{employee.age}}</li>
+    <li v-if="employee" v-for="employee in employees">{{employee.name}} - {{employee.age}}</li>
 </ul>
 ```
 
