@@ -465,6 +465,7 @@ data: function () {
 }
 ```
 ## POST requests with vue-resource
+__Important: if sending nested objects, be sure to JSON.stringify first!__
 ##### Register it in main.js
 ```javascript
 import VueResource from 'vue-resource'
