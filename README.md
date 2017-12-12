@@ -26,6 +26,7 @@ Other stuff worth checking out and worth remembering for future projects:
 * [Vue.js naming convention](https://github.com/dekadentno/vue-cheat-sheet/blob/master/naming-convention.md)
 * [Vue.js official style guide](https://vuejs.org/v2/style-guide/)
 * [Creating a custom webpack template](https://github.com/dekadentno/vue-cheat-sheet/blob/master/custom-webpack-howto.md)
+* [Nightwatch e2e tests](http://nightwatchjs.org/guide)
 ```
 (File -> Settings -> Editor -> Code Style -> Javascript -> Import Scheme -> Intellij IDEA code style XML
 ```
