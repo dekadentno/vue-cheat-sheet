@@ -13,6 +13,7 @@ Cool external libs:
 * [Vuex](https://vuex.vuejs.org/en/intro.html) - centralized state management for Vue.js
 * [vue-stash](https://github.com/cklmercer/vue-stash) - simplified vuex
 * [vue-material](https://vuematerial.io/components/app) - material design for vue apps
+* [superstruct](https://github.com/ianstormtaylor/superstruct) - validating api responses
 
 Useful Chrome extensions:
 * [Vue Devtools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?hl=en)
