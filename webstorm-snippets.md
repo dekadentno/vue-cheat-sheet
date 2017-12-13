@@ -4,21 +4,30 @@ Custom snippets that generate pieces of code using a keyword + TAB.
 
 ##### post
 ```javascript
-this.$http.post($PATH$, {
-  name: this.name
-}).then(res => {
-  console.log("Response: ", res);
-}, error => {
-  console.log("API Error: ", error);
-});
+        this.axios.post($PATH$).then(( res ) => {
+          if ( !res.status == 200 ) {
+            _wrn("Error: ", res.statusText);
+            return
+          }
+          console.log(res.data);
+        }).catch(function ( error ) {
+          _wrn(error);
+          $END$
+        });
 ```
 
 ##### get
 ```javascript
-this.$http.get($PATH$).then(function ( res ) {
-  console.log("Response: ", res.body);
-    $END$
-});
+        this.axios.get($PATH$).then(( res ) => {
+          if ( !res.status == 200 ) {
+            _wrn("Error: ", res.statusText);
+            return
+          }
+          console.log(res.data);
+        }).catch(function ( error ) {
+          _wrn(error);
+          $END$
+        });
 ```
 
 ##### itar
