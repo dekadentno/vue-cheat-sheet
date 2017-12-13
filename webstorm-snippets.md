@@ -4,30 +4,30 @@ Custom snippets that generate pieces of code using a keyword + TAB.
 
 ##### post
 ```javascript
-        this.axios.post($PATH$).then(( res ) => {
-          if ( !res.status == 200 ) {
-            _wrn("Error: ", res.statusText);
-            return
-          }
-          console.log(res.data);
-        }).catch(function ( error ) {
-          _wrn(error);
-          $END$
-        });
+this.axios.post($PATH$).then(( res ) => {
+  if ( !res.status == 200 ) {
+    _wrn("Error: ", res.statusText);
+    return
+  }
+  console.log(res.data);
+}).catch(function ( error ) {
+  _wrn(error);
+  $END$
+});
 ```
 
 ##### get
 ```javascript
-        this.axios.get($PATH$).then(( res ) => {
-          if ( !res.status == 200 ) {
-            _wrn("Error: ", res.statusText);
-            return
-          }
-          console.log(res.data);
-        }).catch(function ( error ) {
-          _wrn(error);
-          $END$
-        });
+this.axios.get($PATH$).then(( res ) => {
+  if ( !res.status == 200 ) {
+    _wrn("Error: ", res.statusText);
+    return
+  }
+  console.log(res.data);
+}).catch(function ( error ) {
+  _wrn(error);
+  $END$
+});
 ```
 
 ##### itar
