@@ -19,7 +19,7 @@ Useful Chrome extensions:
 * [Vue Devtools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?hl=en)
 * [JSON Formatter](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en)
 
-While learning and coding, it is essential to use the autoformat option in Webstorm (Alt + Shift + F), but first, you have to import it from the .xml file [webstorm_autoformat_scheme.xml](./webstorm_autoformat_scheme.xml).
+While learning and coding, it is essential to use the autoformat option in Webstorm (Alt + Shift + F), but first, you have to import it from the .xml file [webstorm_autoformat_scheme.xml](./webstorm_autoformat_scheme.xml). (File -> Settings -> Editor -> Code Style -> Javascript -> Import Scheme -> Intellij IDEA code style XML
 Also, you can make your own Webstorm code snippets. You can see them [here](https://github.com/dekadentno/vue-cheat-sheet/blob/master/webstorm-snippets.md)
 
 Other stuff worth checking out and worth remembering for future projects:
@@ -28,7 +28,6 @@ Other stuff worth checking out and worth remembering for future projects:
 * [Vue.js official style guide](https://vuejs.org/v2/style-guide/)
 * [Creating a custom webpack template](https://github.com/dekadentno/vue-cheat-sheet/blob/master/custom-webpack-howto.md)
 * [Nightwatch e2e tests](http://nightwatchjs.org/guide)
-(File -> Settings -> Editor -> Code Style -> Javascript -> Import Scheme -> Intellij IDEA code style XML
 ```
 ---
 ## Basic HTML and JS
