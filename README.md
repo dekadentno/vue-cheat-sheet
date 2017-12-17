@@ -107,6 +107,23 @@ Remember to check if the element exists with v-if before looping over it
 </ul>
 ```
 
+##### nested arrays
+```html
+<table>
+    <tr>
+      <th>Amount</th>
+      <th>Asset</th>
+      <th>Created</th>
+    </tr>
+    <template v-for="u in users">
+      <tr v-for="t in u.transfers">>
+	<td>{{ t.amount }}</td>
+	<td>{{ t.asset }}</td>
+	<td>{{ t.timestamp }}</td>>
+      </tr>
+    </template>
+</table>
+```
 ##### Set text for element from a variable _name_
 ```html
 <span v-text="name"></span>
