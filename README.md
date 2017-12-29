@@ -616,6 +616,41 @@ watch: {
 }
 ```
 
+## auth restrictions
+To not let someone access e.g. /dashboard if the user is not logged in.
+```javascript
+// add requiresAuth to certain components
+export const routes = [
+  { path: "", component: Login },
+  { path: "/dashboard", component: Dashboard, meta: {requiresAuth: true} }
+];
+```
+
+```javascript
+// configure vue-router
+// important: do not turn on history mode
+const router = new VueRouter({
+  routes,
+  // mode: "history"
+})
+
+router.beforeEach((to, from, next) => {
+  if (to.matched.some(record => record.meta.requiresAuth)) {
+    if ( CHECK_FOR_USER_IN_LOCALSTORAGE_ETC ) {
+      // handle restricted access
+      next({
+        path: '/login',
+      });
+    } else {
+      next();
+    }
+  } else {
+    // do nothing with components without meta: {requiresAuth: true}
+    next();
+  }
+})
+```
+
 ## Stuff that might get handy
 * _v-once_ - render the element and component only once
 * _v-if_ - conditionally render the element
