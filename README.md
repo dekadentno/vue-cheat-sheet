@@ -651,6 +651,81 @@ router.beforeEach((to, from, next) => {
 })
 ```
 
+## table search + sort
+#### multiple column search
+```html
+<!--input field for search query-->
+<input type="text" v-model="searchQuery" placeholder="Search...">
+<!--loop like this, instead of classic for user in users-->
+<tr v-for="user in filterUsers">
+```
+```javascript
+// users array and search query variable
+	data: function () {
+		return {
+			searchQuery: "",
+			users: []
+	};
+},
+
+...
+// computed method for filtering users by 
+// email, last name and first name
+computed: {
+	filterUsers () {
+		return this.users.filter(user => {
+		  return (user.email.toLowerCase().indexOf(this.searchQuery.toLowerCase()) > -1 ||
+		    user.lastName.toLowerCase().indexOf(this.searchQuery.toLowerCase()) > -1 ||
+		    user.firstName.toLowerCase().indexOf(this.searchQuery.toLowerCase()) > -1)
+		})
+	}
+}
+```
+
+#### sort columns asc and desc
+```javascript
+// add needed variables
+    data: function () {
+      return {
+        ascending: false,
+        sortColumn: '',
+        users: [],
+      };
+    },
+methods: {
+      // sort method
+      "sortTable": function sortTable ( col ) {
+        if ( this.sortColumn === col ) {
+          this.ascending = !this.ascending;
+        } else {
+          this.ascending = true;
+          this.sortColumn = col;
+        }
+
+        let ascending = this.ascending;
+
+        this.users.sort(function ( a, b ) {
+          if ( a[col] >= b[col] ) {
+            return ascending ? 1 : -1
+          } else if ( a[col] < b[col] ) {
+            return ascending ? -1 : 1
+          }
+          return 0;
+        })
+      }
+}
+```
+```html
+<!--call sortTable method on column with corresponding property in users object-->
+<tr>
+  <th @click="sortTable('email')">Username</th>
+  <th @click="sortTable('firstName')">First Name</th>
+  <th @click="sortTable('lastName')">Last Name</th>
+  <th @click="sortTable('address')">Address</th>
+  <th>Phone number</th>
+</tr>
+```
+
 ## Stuff that might get handy
 * _v-once_ - render the element and component only once
 * _v-if_ - conditionally render the element
