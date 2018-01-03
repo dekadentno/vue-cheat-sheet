@@ -28,6 +28,7 @@ Other stuff worth checking out and worth remembering for future projects:
 * [Vue.js official style guide](https://vuejs.org/v2/style-guide/)
 * [Creating a custom webpack template](https://github.com/dekadentno/vue-cheat-sheet/blob/master/custom-webpack-howto.md)
 * [Nightwatch e2e tests](http://nightwatchjs.org/guide)
+* [Dummy API with lots of users](https://api.randomuser.me/?results=20)
 ```
 ---
 ## Basic HTML and JS
