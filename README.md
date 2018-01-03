@@ -726,6 +726,27 @@ methods: {
 </tr>
 ```
 
+## import config file
+```javascript
+// config.js
+// example config file
+var apiPort = 5566;
+var currHost = window.location.protocol + '//' + window.location.hostname + ':' + apiPort + '/api/v1';
+var url = window.location.host !== 'localhost:8080' ? 'http://PROD-URL/' : currHost;
+
+export var cfg = {
+  version: "0.1.0",
+  api: {
+    endpoint: url
+  }
+};
+```
+```javascript
+// main.js
+import * as config from './config'
+window._cfg = config.cfg
+```
+
 ## Stuff that might get handy
 * _v-once_ - render the element and component only once
 * _v-if_ - conditionally render the element
