@@ -14,6 +14,7 @@ Cool external libs:
 * [vue-stash](https://github.com/cklmercer/vue-stash) - simplified vuex
 * [vue-material](https://vuematerial.io/components/app) - material design for vue apps
 * [superstruct](https://github.com/ianstormtaylor/superstruct) - validating api responses
+* [uiv](https://uiv.wxsm.space/) - Bootstrap 3 Components implemented by Vue 2
 
 Useful Chrome extensions:
 * [Vue Devtools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?hl=en)
