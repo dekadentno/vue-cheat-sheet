@@ -30,6 +30,7 @@ Other stuff worth checking out and worth remembering for future projects:
 * [Creating a custom webpack template](https://github.com/dekadentno/vue-cheat-sheet/blob/master/custom-webpack-howto.md)
 * [Nightwatch e2e tests](http://nightwatchjs.org/guide)
 * [Dummy API with lots of users](https://api.randomuser.me/?results=20)
+* [Serve builded files over HTTP](https://www.npmjs.com/package/serve)
 ---
 ## Basic HTML and JS
 ```html
