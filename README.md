@@ -621,6 +621,19 @@ watch: {
 }
 ```
 
+##### watch if object is changed
+```javascript
+    watch: {
+      picked: {
+        handler(val, oldVal) {
+          console.log('changed: ', oldVal);
+          console.log('new: ', val);
+        },
+        deep: true,
+        immediate: true
+      }
+    }
+```
 ## auth restrictions
 To not let someone access e.g. /dashboard if the user is not logged in.
 ```javascript
