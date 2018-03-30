@@ -48,3 +48,8 @@ for (var $INDEX$ = 0; $INDEX$ < $ARRAY$.length; $INDEX$++) {
 <div id="test">
 </div>
 ```
+
+##### asdf
+```javascript
+console.log('$BLA$');
+```
