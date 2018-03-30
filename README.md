@@ -743,7 +743,38 @@ methods: {
   <th>Phone number</th>
 </tr>
 ```
-
+## Search + filters + sort
+```javascript
+    searchVideos() {
+      let filtered = this.videos;
+      // search by keyword
+      if (this.filters.searchQuery) {
+        filtered = this.videos.filter(
+          v => v.title.toLowerCase().indexOf(this.filters.searchQuery) > -1
+        );
+      }
+      // filter by date range
+      if (this.filters.startDate && this.filters.endDate) {
+        filtered = filtered.filter(v => {
+          var time = new Date(v.created_at).getTime();
+          return (new Date(this.filters.startDate).getTime() < time && time < new Date(this.filters.endDate).getTime());
+        });
+      }
+      // filter by property value
+      if (this.filters.filterVal) {
+        if (this.filters.filterVal === 'female') {
+          filtered = filtered.filter(
+            v => v.gender === this.filters.filterVal
+          );
+        }
+	// sort by property
+        if (this.filters.sortValue === 'most_popular') {
+          filtered.sort(function(a, b) { return a.views - b.views; });
+        }
+      }
+      return filtered;
+    }
+```
 ## import config file
 ```javascript
 // config.js
