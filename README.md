@@ -386,6 +386,7 @@ Vue.filter("to-uppercase", function ( value ) {
 
 
 ## References
+##### An object of DOM elements and component instances
 ```html
 <input ref="name" type="text" />
 ```
