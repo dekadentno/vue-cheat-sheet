@@ -796,6 +796,13 @@ export var cfg = {
 import * as config from './config'
 window._cfg = config.cfg
 ```
+## Focus on a field
+```javascript
+mounted() {
+	this.$refs.myInput.focus();
+}
+```
+
 
 ## Stuff that might get handy
 * _v-once_ - render the element and component only once
