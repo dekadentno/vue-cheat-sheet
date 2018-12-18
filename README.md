@@ -794,6 +794,46 @@ doSomething()
 // I did something!
 // I did something again!
 ```
+
+## async await with fetch in vuex
+```javascript
+// example
+import Vue from 'vue'
+import Vuex from 'vuex'
+
+Vue.use(Vuex)
+
+export default new Vuex.Store({
+  state: {
+    data: null
+  },
+  mutations: {
+    setData: (state, payload) => {
+      state.resource = payload
+    }
+  },
+  actions: {
+    async getData({ commit }) {
+      let res = null
+      try {
+        res = await fetch(
+          'https://api.coindesk.com/v1/bpi/currentprice.json'
+        )
+      } catch (err) {
+        console.log('err: ', err)
+        return
+      }
+
+      // Handle success
+      console.log('waiting for data...');
+      const data = await res.json()
+      console.log('data: ', data)
+      commit('setData', data)
+    }
+  }
+})
+
+```
 ## import config file
 ```javascript
 // config.js
