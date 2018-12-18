@@ -774,6 +774,26 @@ methods: {
       return filtered;
     }
 ```
+## async await
+An ```async``` function returns a promise. When you want to call this function you prepend ```await```, and the calling code will stop until the promise is resolved or rejected.
+```javascript
+// example
+const doSomethingAsync = () => {
+    return new Promise((resolve) => {
+        setTimeout(() => resolve('I did something'), 3000)
+    })
+}
+
+const doSomething = async () => {
+    console.log(await doSomethingAsync())
+    console.log('I did something again!')
+}
+
+doSomething()
+// result:
+// I did something!
+// I did something again!
+```
 ## import config file
 ```javascript
 // config.js
