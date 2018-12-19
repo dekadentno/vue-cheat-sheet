@@ -20,6 +20,7 @@ Useful Chrome extensions:
 
 Stuff that might get handy in almost every Vue.js project:
 * [Auth restrictions](http://www.eddyella.com/2017/04/24/vue-2-spa-restricting-components-for-logged-in-users-only/)
+* [Vue reactivity](https://vuejs.org/v2/guide/reactivity.html)
 
 While learning and coding, it is essential to use the autoformat option in Webstorm (Alt + Shift + F), but first, you have to import it from the .xml file [webstorm_autoformat_scheme.xml](./webstorm_autoformat_scheme.xml). (File -> Settings -> Editor -> Code Style -> Javascript -> Import Scheme -> Intellij IDEA code style XML
 Also, you can make your own Webstorm code snippets. You can see them [here](https://github.com/dekadentno/vue-cheat-sheet/blob/master/webstorm-snippets.md)
