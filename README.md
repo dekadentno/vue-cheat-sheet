@@ -127,6 +127,16 @@ Remember to check if the element exists with v-if before looping over it
     </template>
 </table>
 ```
+
+##### variables in v-for
+```html
+<li v-for="id in users" :key="id" :set="item = getUserData(id)">
+    <img :src="item.avatar" /><br />
+    {{ item.name }}<br />
+    {{ item.homepage }}
+</li>
+```
+
 ##### Set text for element from a variable _name_
 ```html
 <span v-text="name"></span>
