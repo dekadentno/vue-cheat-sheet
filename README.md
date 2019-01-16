@@ -1,6 +1,8 @@
 # vue-cheat-sheet
 My cheat sheet for vue.js most basic stuff. The goal wasn't to make another [Vue documentation](https://vuejs.org/v2/guide/), because the official one is already badass.
 
+Contributions and PRs are very welcome.
+
 _"You must type each of these exercises in, manually. If you copy and paste, you might as well not even do them. The point of these exercises is to train your hands, your brain, and your mind in how to read, write, and see code. If you copy-paste, you are cheating yourself out of the effectiveness of the lessons."_ - Zed A.
 
 Sources:
