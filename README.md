@@ -58,6 +58,7 @@ Other stuff worth checking out and worth remembering for future projects:
 	</body>
 </html>
 ```
+![](https://cdn-images-1.medium.com/max/2000/1*C4A0g1KYpa_olbSJcxAEBA.png)
 ```javascript
 new Vue({
 	el: '#vue-app', // contoled element
