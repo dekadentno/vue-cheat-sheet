@@ -171,6 +171,10 @@ this div will have the _red_ class if the _userFound_ variable is set to _true_
 ```html
 <div v-bind:class="{ red: userFound }">...</div>
 ```
+this div will have the _red_ class if the _isAdmin_ variable is set to _true_
+```html
+<div :class="[isAdmin ? 'red' : 'blue']">...</div>
+```
 
 ## Events
 ##### Call _method_ on click event
