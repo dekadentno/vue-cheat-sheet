@@ -9,13 +9,6 @@ Sources:
 * [iamshaunjp](https://github.com/iamshaunjp/vuejs-playlist)
 * [Vue.js official guide](https://vuejs.org/v2/guide/)
 
-Cool external libs:
-* [axios](https://github.com/axios/axios) - promise based HTTP client
-* [vue-router](https://router.vuejs.org/en/) - routing
-* [vue-cli](https://github.com/vuejs/vue-cli) - CLI for scaffolding Vue.js projects
-* [Vuex](https://vuex.vuejs.org/en/intro.html) - centralized state management for Vue.js
-* [element-ui](https://element.eleme.io/) - component library
-
 Useful Chrome extensions:
 * [Vue Devtools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?hl=en)
 * [JSON Formatter](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en)
@@ -23,18 +16,8 @@ Useful Chrome extensions:
 Stuff that might get handy in almost every Vue.js project:
 * [Auth restrictions](http://www.eddyella.com/2017/04/24/vue-2-spa-restricting-components-for-logged-in-users-only/)
 * [Vue reactivity](https://vuejs.org/v2/guide/reactivity.html)
+* [Improve Vuex performance](https://medium.com/@jiihu/how-to-improve-performance-of-vuex-store-c9e3cfb01f72)
 
-While learning and coding, it is essential to use the autoformat option in Webstorm (Alt + Shift + F), but first, you have to import it from the .xml file [webstorm_autoformat_scheme.xml](./webstorm_autoformat_scheme.xml). (File -> Settings -> Editor -> Code Style -> Javascript -> Import Scheme -> Intellij IDEA code style XML
-Also, you can make your own Webstorm code snippets. You can see them [here](https://github.com/dekadentno/vue-cheat-sheet/blob/master/webstorm-snippets.md)
-
-Other stuff worth checking out and worth remembering for future projects:
-* [Application structure](https://github.com/dekadentno/vue-cheat-sheet/blob/master/app-structure.md)
-* [Vue.js naming convention](https://github.com/dekadentno/vue-cheat-sheet/blob/master/naming-convention.md)
-* [Vue.js official style guide](https://vuejs.org/v2/style-guide/)
-* [Creating a custom webpack template](https://github.com/dekadentno/vue-cheat-sheet/blob/master/custom-webpack-howto.md)
-* [Nightwatch e2e tests](http://nightwatchjs.org/guide)
-* [Dummy API with lots of users](https://api.randomuser.me/?results=20)
-* [Serve builded files over HTTP](https://www.npmjs.com/package/serve)
 ---
 ## Basic HTML and JS
 ```html
