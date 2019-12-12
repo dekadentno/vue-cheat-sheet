@@ -253,6 +253,11 @@ _method_ is called when ALT+ENTER is pressed
 ```html
 <input ref="name" v-on:keyuop.alt.enter="method" type="text" />
 ```
+##### Conditional event binding (as of Vue 2.6)
+The method ```sendModey``` will be called only if the condition ``` amount > 0 ``` has been met.
+```vue
+<button @click="amount > 0 && sendMoney()">Send money</button>
+```
 
 ## Custom events
 ```javascript
