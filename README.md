@@ -1,5 +1,6 @@
 # vue-cheat-sheet
 My cheat sheet for vue.js most basic stuff. The goal wasn't to make another [Vue documentation](https://vuejs.org/v2/guide/), because the official one is already badass.
+Big thank you to [boussadjra](https://github.com/boussadjra/) for making this cheat sheet available as a [website](https://boussadjra.github.io/vue-cheat-sheet/)
 
 Contributions and PRs are very welcome.
 
