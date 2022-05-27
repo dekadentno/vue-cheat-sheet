@@ -93,8 +93,8 @@ Remember to check if the element exists with v-if before looping over it
 ```
 ##### array of objects
 ```html
-<ul>
-    <li v-if="employee" v-for="employee in employees">{{employee.name}} - {{employee.age}}</li>
+<ul v-if="emplyee">
+    <li  v-for="employee in employees">{{employee.name}} - {{employee.age}}</li>
 </ul>
 ```
 
